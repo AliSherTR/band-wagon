@@ -6,7 +6,7 @@ import { Input } from "./ui/input";
 
 export default function Navbar() {
   return (
-    <header className=" bg-[#2A2B2F] p-6 border-b text-white">
+    <header className=" bg-[#2A2B2F] p-6 text-white">
       <div className=" container mx-auto flex items-center justify-between">
         <div>
           <Image src={logo} alt="logo" width={150} height={150} />
@@ -14,17 +14,17 @@ export default function Navbar() {
         <div className=" basis-[90%] ">
           <Input
             type="text"
-            className="  border w-1/2 block mx-auto py-2 px-3 rounded-full text-white"
+            className=" border w-1/2 block mx-auto py-6 px-3 rounded-full text-white"
             placeholder="Search by name, artist or location"
           />
         </div>
 
         <div>
           <Button
-            className=" bg-[#1ED760] text-sm px-8 font-bold hover:bg-[#1ED760] cursor-pointer "
+            className=" bg-transparent text-sm px-8 hover:bg-transparent  cursor-pointer "
             size={"sm"}
           >
-            Login
+            Login into your account
           </Button>
         </div>
       </div>
