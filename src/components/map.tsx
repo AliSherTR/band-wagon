@@ -86,8 +86,9 @@ const Map: React.FC<MapProps> = ({
         .dark-popup .leaflet-popup-content-wrapper {
           background: #2a2b2f;
           color: white;
-          width: 464px;
-          border-radius: 20px;
+          width: 364px;
+          border-radius: 10px;
+          padding: 18px 0px;
         }
         .dark-popup .leaflet-popup-tip {
           background: #525252;

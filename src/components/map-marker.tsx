@@ -4,7 +4,7 @@ import { AlarmClock, CalendarCheck, MapPin, Music } from "lucide-react";
 
 export default function MapMarker() {
   return (
-    <div className="w-full">
+    <div className="w-full pb-12">
       <div className="flex justify-between items-center w-full border-b py-4">
         <div className="flex gap-3 items-center">
           <div className="w-12 h-12 overflow-hidden bg-gray-300 rounded-full flex items-center justify-center mb-2">
