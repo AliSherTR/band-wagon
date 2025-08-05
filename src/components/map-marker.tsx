@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { AlarmClock, CalendarCheck, MapPin, Music } from "lucide-react";
+import Link from "next/link";
 
 export default function MapMarker() {
   return (
@@ -21,12 +22,14 @@ export default function MapMarker() {
             <span className=" tracking-widest ">Artist</span>
           </div>
         </div>
-        <Button
-          variant={"outline"}
-          className=" rounded-full border-[#1ED760] hover:bg-transparent text-[#1ED760]  hover:text-[#1ED760] cursor-pointer bg-transparent"
-        >
-          View Profile
-        </Button>
+        <Link href="/artist-profile">
+          <Button
+            variant={"outline"}
+            className=" rounded-full border-[#1ED760] hover:bg-transparent text-[#1ED760]  hover:text-[#1ED760] cursor-pointer bg-transparent"
+          >
+            View Profile
+          </Button>
+        </Link>
       </div>
 
       <div className=" p-5 flex items-center justify-center border mt-3 mb-5">
