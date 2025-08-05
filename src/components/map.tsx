@@ -2,13 +2,13 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Type definitions
 interface MarkerData {
   lat: number;
   lng: number;
-  popup?: string;
+  popup?: React.ReactElement;
 }
 
 interface MapProps {
@@ -34,7 +34,7 @@ const Map: React.FC<MapProps> = ({
   center = [33.6844, 73.0479],
   zoom = 13,
   markers = [],
-  className = "h-96 w-full",
+  className = "h-full w-full",
   darkMode = true,
 }) => {
   const [isClient, setIsClient] = useState(false);
@@ -84,11 +84,22 @@ const Map: React.FC<MapProps> = ({
       {/* Custom CSS for dark popups */}
       <style jsx global>{`
         .dark-popup .leaflet-popup-content-wrapper {
-          background: #374151;
+          background: #2a2b2f;
           color: white;
+          width: 464px;
+          border-radius: 20px;
         }
         .dark-popup .leaflet-popup-tip {
-          background: #374151;
+          background: #525252;
+        }
+        .leaflet-popup-content-wrapper {
+          width: 300px;
+          padding: 3px;
+        }
+        .leaflet-popup-content {
+          margin: 0;
+          padding: 16px;
+          width: 100% !important;
         }
       `}</style>
     </div>

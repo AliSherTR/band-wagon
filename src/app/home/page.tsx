@@ -1,5 +1,6 @@
 "use client";
 import Filters from "@/components/filters";
+import MapMarker from "@/components/map-marker";
 import dynamic from "next/dynamic";
 import React from "react";
 
@@ -7,7 +8,7 @@ import React from "react";
 interface MarkerData {
   lat: number;
   lng: number;
-  popup: string;
+  popup: React.ReactElement;
 }
 
 // Dynamically import the Map component with SSR disabled
@@ -22,8 +23,9 @@ const DynamicMap = dynamic(() => import("@/components/map"), {
 
 const MapPage: React.FC = () => {
   const sampleMarkers: MarkerData[] = [
-    { lat: 33.6844, lng: 73.0479, popup: "Rawalpindi" },
-    { lat: 33.7181, lng: 73.0776, popup: "Sample Location" },
+    { lat: 33.6844, lng: 73.0479, popup: <MapMarker /> },
+    { lat: 33.7181, lng: 73.0776, popup: <MapMarker /> },
+    { lat: 33.1439, lng: 73.9918, popup: <MapMarker /> },
   ];
 
   return (
